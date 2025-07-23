@@ -4,16 +4,7 @@
   overflow: hidden;
 }
 
-.cardbooks::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(22, 211, 16, 0.5);  
-  opacity: 0;
-  transition: opacity 0.3s linear;
-  z-index: 1;
  
-}
 
 .cardbooks:hover {
   transform: scale(1.05);
@@ -23,12 +14,5 @@
 .cardbooks:hover::before {
   opacity: 1;
 }
-
-.cardbooks .card {
-  position: relative;
-  z-index: 2;  
-  background-color: transparent;  
-   
-}
-
+ 
 

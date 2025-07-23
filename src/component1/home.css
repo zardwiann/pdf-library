@@ -27,8 +27,107 @@
 .buttonbooks  {
   position: relative;
   z-index: 2;  
-  background-color: transparent;  
+  
    
 }
 
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-slide-up {
+  animation: fadeSlideUp 1s ease-out forwards;
+}
+
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-left {
+  animation: slideInLeft 1s ease-out forwards;
+}
+
+.animate-slide-right {
+  animation: slideInRight 1s ease-out forwards;
+}
+
+ .typewriter {
+  overflow: hidden;
+  border-right: 2px solid #198754;
+  white-space: nowrap;
+  display: inline-block;
+  animation:
+    typing 10s steps(30, end) infinite,
+    blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  0% { width: 0 }
+  50% { width: 100% }
+  100% { width: 0 }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #198754; }
+}
+
+.card-half-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-half-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -30%;
+  width: 160%;
+  height: 50%;
+  background-color: #faebab;  
+  transform: skewY(-5deg);
+  z-index: 0;
+}
+
+
+.bounce-zoom-box {
+   border-top: 5px solid #198754;
+   border-bottom: 5px solid #198754;
+}
+ 
+.zoom-image{
+   border-right: 5px solid #198754;
+   border-bottom: 5px solid #198754;
+}
+
+.bordercol{
+    border-left: 5px solid #198754;
+   border-bottom: 5px solid #198754;
+}
 

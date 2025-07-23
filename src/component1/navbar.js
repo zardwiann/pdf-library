@@ -1,11 +1,9 @@
-import { Link, Outlet } from "react-router-dom";
-import Categories from "./categories";
-import HOME from "./home";
-
+import { Link } from "react-router-dom";
+import '../component1/navbar.css'
 export default function Navbar() {
     return (
         <main>
-            <nav className="navbar navbar-expand-lg shadow-lg fixed-top bg-white">
+            <nav className="navbar navbar-expand-lg  border border-success fixed-top bg-white">
                 <div className="container">
                     <span className="navbar-brand">
                         <i className="navbar-brand-icon bi-book text-success me-1 fw-bold"></i>
@@ -26,13 +24,13 @@ export default function Navbar() {
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav ms-lg-auto me-lg-4">
                             <li className="nav-item">
-                                <Link className="nav-link click-scroll text-success fw-bold" to="home">Home</Link>
+                                <a className="nav-link click-scroll text-success fw-bold" href="#home">Home</a>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link click-scroll  text-success fw-bold" to="library">Library</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link click-scroll  text-success fw-bold" to="">Categories</Link>
+                                <a className="nav-link click-scroll  text-success fw-bold" href="#category">Categories</a>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link click-scroll  text-success fw-bold" to="javascript">About </Link>
