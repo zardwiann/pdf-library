@@ -1,16 +1,15 @@
 import React from 'react';
 import pdfFiles from '../data/pdfFiles';
 import './style.css';
-const Linux = () => {
+const Arduino = () => {
     return (
         <section className="py-5 position-relative ebook-section">
-            <div className="container position-relative shadow-lg p-2 rounded-4" id='#WEB'>
-                <h1 className='mb-4'>LINUX </h1>
-                 <hr className='text-success'></hr>
+            <div className="container position-relative shadow-lg rounded-4 p-2" id='#WEB' >
+                <h1 className='mb-4'>Arduino </h1>
+                <hr className='text-success'></hr>
                 <div className="row g-3 row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6">
                     {pdfFiles
-                        .filter((file) => file.type === "LINUX")
-                        
+                        .filter((file) => file.type === "ARDUINO")
                         .map((file) => (
                             <div className="col" key={file.id}>
                                 <div className="card h-100 border border-success shadow-sm  rounded-3 cardbooks">
@@ -29,7 +28,7 @@ const Linux = () => {
                                             {file.name}
                                         </h6>
                                     </div>
-                                    <div className="card-footer bg-transparent border-0 text-center py-2">
+                                   <div className="card-footer bg-transparent border-0 text-center py-2">
                                         <a
                                             href={`https://drive.google.com/file/d/${file.id}/preview`}
                                             target="_blank"
@@ -54,4 +53,4 @@ const Linux = () => {
 };
 
 
-export default Linux;
+export default Arduino;

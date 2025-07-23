@@ -1,0 +1,34 @@
+.buttonbooks {
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.buttbuttonbookson::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(22, 211, 16, 0.5);  
+  opacity: 0;
+  transition: opacity 0.3s linear;
+  z-index: 1;
+ 
+}
+
+.buttonbooks:hover {
+  transform: scale(1.05);
+  
+}
+
+.buttonbooks:hover::before {
+  opacity: 1;
+}
+
+.buttonbooks  {
+  position: relative;
+  z-index: 2;  
+  background-color: transparent;  
+   
+}
+
+
