@@ -1,0 +1,111 @@
+ .category-card {
+     background: rgba(255, 255, 255, 0.95);
+     backdrop-filter: blur(10px);
+     border: none;
+     border-radius: 15px;
+     transition: all 0.3s ease;
+     height: 100%;
+     cursor: pointer;
+     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+ }
+
+ .category-card:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+     background: rgba(255, 255, 255, 1);
+ }
+
+ .category-icon {
+     font-size: 3rem;
+     margin-bottom: 1rem;
+     background: linear-gradient(45deg, #0bb430, #1caa7b);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     background-clip: text;
+ }
+
+ .category-title {
+     font-weight: 600;
+     color: #2c3e50;
+     margin-bottom: 0.5rem;
+ }
+
+ .category-count {
+     color: #6c757d;
+     font-size: 0.9rem;
+ }
+
+ .header-section {
+     background: rgba(255, 255, 255, 0.1);
+     backdrop-filter: blur(20px);
+     border-radius: 20px;
+     padding: 2rem;
+     margin-bottom: 3rem;
+     text-align: center;
+     color: white;
+ }
+
+ .search-bar {
+     max-width: 500px;
+     margin: 0 auto;
+     margin-top: 1.5rem;
+ }
+
+ .search-input {
+     border-radius: 25px;
+     border: none;
+     padding: 12px 20px;
+     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+ }
+
+ .search-btn {
+     border-radius: 25px;
+     background: linear-gradient(45deg, #0aca70, #15bd8a);
+     border: none;
+     padding: 12px 25px;
+ }
+
+ .filter-tabs {
+     margin-bottom: 2rem;
+ }
+
+ .nav-pills .nav-link {
+     border-radius: 25px;
+     margin: 0 5px;
+     background: rgba(255, 255, 255, 0.2);
+     color: white;
+     border: 1px solid rgba(255, 255, 255, 0.3);
+ }
+
+ .nav-pills .nav-link.active {
+     background: linear-gradient(45deg, #17c76f, #20af6c);
+     color: white;
+ }
+
+ @media (max-width: 768px) {
+     .category-icon {
+         font-size: 2.5rem;
+     }
+
+     .header-section {
+         padding: 1.5rem;
+         margin-bottom: 2rem;
+     }
+
+     .nav-pills .nav-link {
+         margin: 2px;
+         font-size: 0.9rem;
+         padding: 8px 15px;
+     }
+ }
+
+ .badge-new {
+     position: absolute;
+     top: 10px;
+     right: 10px;
+     background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+     color: white;
+     font-size: 0.7rem;
+     padding: 4px 8px;
+     border-radius: 10px;
+ }
