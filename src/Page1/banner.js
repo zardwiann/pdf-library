@@ -63,12 +63,12 @@ function Banner() {
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
 
             </div>
             <Categories />
-            <Footer/>
+            <Footer />
         </section>
 
 

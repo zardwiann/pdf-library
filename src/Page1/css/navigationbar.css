@@ -6,6 +6,13 @@
       --hover-bg: rgba(25, 135, 84, 0.05);
   }
 
+  .nav-item.dropdown:hover .dropdown-menu {
+      display: block;
+  }
+
+  .nav-item .dropdown-menu {
+      margin-top: 0;
+  }
 
 
   .navbar {
@@ -125,7 +132,7 @@
       background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23198754' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='m4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
   }
 
-  /* Mobile optimizations */
+ 
   @media (max-width: 991px) {
       .navbar-collapse {
           background: rgba(255, 255, 255, 0.98);
@@ -136,6 +143,15 @@
           box-shadow: 0 10px 40px rgba(25, 135, 84, 0.1);
           border: 1px solid rgba(25, 135, 84, 0.1);
       }
+
+      .nav-item.dropdown:hover .dropdown-menu {
+          display: block;
+      }
+
+      .nav-item .dropdown-menu {
+          margin-top: 0;
+      }
+
 
       .nav-link {
           margin: 0.25rem 0;

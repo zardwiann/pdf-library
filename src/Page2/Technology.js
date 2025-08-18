@@ -2,9 +2,7 @@
 import { useState } from 'react';
 import pdfFiles from '../data/pdfFiles';
 import '../Page2/css/technology.css'
-
-import ParticlesComponent from '../particles';
-
+import technologylisttopic from '../data/technologylistnavigation';
 
 export default function Technology() {
     const [filteredBooks, setFilteredBooks] = useState([]);
@@ -12,55 +10,33 @@ export default function Technology() {
     const [searchTerm, setSearchTerm] = useState("");
     const [selectedType, setSelectedType] = useState("");
     return (
-
-        <section className="py-3 py-md-5 position-relative ebook-section ">
-
+        <section className="ebook-section ">
             <div className="container-fluid px-3 px-md-5 py-4 py-md-5 position-relative shadow-lg rounded-4 mt-3 mt-md-5 card border-0" id="WEB">
-                <h1 className='mb-2 mt-3 mt-md-5 text-center text-md-start'>Technology</h1>
                 <hr className='text-success'></hr>
-                <div className="d-flex flex-wrap gap-2 justify-content-center justify-content-sm-start">
-                    <button className="btn btn-primary search-btn text-white" onClick={() => setSelectedType("IS")}>
-                        Information Management 1
-                    </button>
-                    <button className="btn btn-primary search-btn text-white" onClick={() => setSelectedType("WEB")}>
-                        Web Development
-                    </button>
-                    <button className="btn btn-primary search-btn text-white" onClick={() => setSelectedType("JAVASCRIPT")}>
-                        JAVASCRIPT
-                    </button>
-                    <button className="btn btn-primary search-btn text-white" onClick={() => setSelectedType("GO")}>
-                        GO
-                    </button>
-                    <button className="btn btn-primary search-btn text-white" onClick={() => setSelectedType("JAVA")}>
-                        JAVA
-                    </button>
-                    <button className="btn btn-primary search-btn text-white" onClick={() => setSelectedType("DOCKER")}>
-                        DOCKER
-                    </button>
-                    <button className="btn btn-primary search-btn text-white" onClick={() => setSelectedType("ARDUINO")}>
-                        ARDUINO
-                    </button>
-                    <button className="btn btn-primary search-btn text-white" onClick={() => setSelectedType("C PROGRAMMING")}>
-                        C PROGRAMMING
-                    </button>
-                    <button className="btn btn-primary search-btn text-white" onClick={() => setSelectedType("LARAVEL")}>
-                        LARAVEL
-                    </button>
-                    <button className="btn btn-primary search-btn text-white" onClick={() => setSelectedType("ALGORITHM")}>
-                        ALGORITHM
-                    </button>
-                    <button className="btn btn-primary search-btn text-white" onClick={() => setSelectedType("VERSION CONTROL")}>
-                        VERSION CONTROL
-                    </button>
-                    <button className="btn btn-primary search-btn text-white" onClick={() => setSelectedType("LINUX")}>
-                        LINUX
-                    </button>
-                </div>
-                <div className="search-bar mt-4">
-                    <div className="input-group mx-auto" style={{ maxWidth: '500px' }}>
+                <div className="searchbar mt-5" >
+                    <div className="input-group  " style={{ maxWidth: '800px' }}>
+                        <select
+                            className="form-select search-input border border-success"
+                            defaultValue=""
+                            style={{
+                                padding: "0.5rem 1rem",
+                                borderRadius: "0.5rem",
+                                fontSize: "1rem",
+                            }}
+                            onChange={(e) => setSelectedType(e.target.value)}
+                        >
+                            <option value="" disabled hidden>
+                                Select Technology Topic ...
+                            </option>
+                            {technologylisttopic.map((file) => (
+                                <option key={file.search} value={file.search}>
+                                    {file.name}
+                                </option>
+                            ))}
+                        </select>
                         <input
                             type="text"
-                            className="form-control search-input"
+                            className="form-control search-input border border-success"
                             placeholder="Search categories or books..."
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
@@ -70,8 +46,11 @@ export default function Technology() {
                         </button>
                     </div>
                 </div>
-
-                <div className="row g-2 g-md-3 p-2 p-md-5 justify-content-center justify-content-md-start">
+                <h1 className='mb-2 mt-3 mt-md-5 text-center text-md-start'>
+                    Technology
+                </h1>
+                <hr className='text-success'></hr>
+                <div className="row g-2 g-md-3 p-2 p-md-5 justify-content-center justify-content-md-start  mt-3 bookslist" style={{ maxHeight: "900px", overflowY: "auto" }}>
                     {pdfFiles
                         .filter((file) => {
                             const matchesSearch = file.name.toLowerCase().includes(searchTerm.toLowerCase());

@@ -1,20 +1,14 @@
 
 
-import { Link, Outlet } from 'react-router-dom'
-import '../Page2/css/librarycategory.css'
-import '../Page1/css/categories.css'
-import { useState } from 'react';
-
  
+import { Link, Outlet } from 'react-router-dom';
+
+
+
 
 const LibraryCategory = () => {
-
- 
     return (
-        <div className="container-fluid  " id='category'>
-           
-           
-
+        <div className='bg-white'>
             <Outlet />
         </div>
 
