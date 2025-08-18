@@ -29,7 +29,7 @@ const NavigationvBar = () => {
                 <div className="container">
                     <Link className="navbar-brand" to="/" onClick={handleLinkClick}>
                         <i className="navbar-brand-icon bi-book me-2"></i>
-                        <span>Jentra E-Library</span>
+                        <span> J E-Library &  Classes</span>
                     </Link>
 
                     <button

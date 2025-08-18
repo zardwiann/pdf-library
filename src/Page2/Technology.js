@@ -7,15 +7,55 @@ import ParticlesComponent from '../particles';
 
 
 export default function Technology() {
-    const [searchTerm, setSearchTerm] = useState('');
+    const [filteredBooks, setFilteredBooks] = useState([]);
+
+    const [searchTerm, setSearchTerm] = useState("");
+    const [selectedType, setSelectedType] = useState("");
     return (
 
-        <section className="py-3 py-md-5 position-relative ebook-section">
-            <ParticlesComponent id="particles" />
-            <div className="container-fluid px-3 px-md-5 py-4 py-md-5 position-relative shadow-lg rounded-4 mt-3 mt-md-5" id="WEB">
+        <section className="py-3 py-md-5 position-relative ebook-section ">
+
+            <div className="container-fluid px-3 px-md-5 py-4 py-md-5 position-relative shadow-lg rounded-4 mt-3 mt-md-5 card border-0" id="WEB">
                 <h1 className='mb-2 mt-3 mt-md-5 text-center text-md-start'>Technology</h1>
                 <hr className='text-success'></hr>
-
+                <div className="d-flex flex-wrap gap-2 justify-content-center justify-content-sm-start">
+                    <button className="btn btn-primary search-btn text-white" onClick={() => setSelectedType("IS")}>
+                        Information Management 1
+                    </button>
+                    <button className="btn btn-primary search-btn text-white" onClick={() => setSelectedType("WEB")}>
+                        Web Development
+                    </button>
+                    <button className="btn btn-primary search-btn text-white" onClick={() => setSelectedType("JAVASCRIPT")}>
+                        JAVASCRIPT
+                    </button>
+                    <button className="btn btn-primary search-btn text-white" onClick={() => setSelectedType("GO")}>
+                        GO
+                    </button>
+                    <button className="btn btn-primary search-btn text-white" onClick={() => setSelectedType("JAVA")}>
+                        JAVA
+                    </button>
+                    <button className="btn btn-primary search-btn text-white" onClick={() => setSelectedType("DOCKER")}>
+                        DOCKER
+                    </button>
+                    <button className="btn btn-primary search-btn text-white" onClick={() => setSelectedType("ARDUINO")}>
+                        ARDUINO
+                    </button>
+                    <button className="btn btn-primary search-btn text-white" onClick={() => setSelectedType("C PROGRAMMING")}>
+                        C PROGRAMMING
+                    </button>
+                    <button className="btn btn-primary search-btn text-white" onClick={() => setSelectedType("LARAVEL")}>
+                        LARAVEL
+                    </button>
+                    <button className="btn btn-primary search-btn text-white" onClick={() => setSelectedType("ALGORITHM")}>
+                        ALGORITHM
+                    </button>
+                    <button className="btn btn-primary search-btn text-white" onClick={() => setSelectedType("VERSION CONTROL")}>
+                        VERSION CONTROL
+                    </button>
+                    <button className="btn btn-primary search-btn text-white" onClick={() => setSelectedType("LINUX")}>
+                        LINUX
+                    </button>
+                </div>
                 <div className="search-bar mt-4">
                     <div className="input-group mx-auto" style={{ maxWidth: '500px' }}>
                         <input
@@ -33,11 +73,11 @@ export default function Technology() {
 
                 <div className="row g-2 g-md-3 p-2 p-md-5 justify-content-center justify-content-md-start">
                     {pdfFiles
-                        .filter(
-                            (file) =>
-                                file.type &&
-                                file.name.toLowerCase().includes(searchTerm.toLowerCase())
-                        )
+                        .filter((file) => {
+                            const matchesSearch = file.name.toLowerCase().includes(searchTerm.toLowerCase());
+                            const matchesType = selectedType === "" || file.type === selectedType;
+                            return matchesSearch && matchesType;
+                        })
                         .map((file) => (
                             <div className="col-6 col-sm-4 col-md-3 col-lg-2" key={file.id}>
                                 <div className="card h-100 border border-success shadow-sm rounded-3 cardbooks">
@@ -85,6 +125,8 @@ export default function Technology() {
                         ))
                     }
                 </div>
+
+
             </div>
         </section>
     )

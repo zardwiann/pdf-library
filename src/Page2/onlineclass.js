@@ -3,10 +3,27 @@ import React, { useState, useEffect } from 'react';
 import '../Page2/css/online.css'
 
 const classData = [
-  
     {
         id: 1,
-        title:'Major Courses -Payao Mobile Class 1st Year',
+        title: 'P.E.C',
+        instructor: 'KETH CERNAL',
+        description: 'Professional Education course is designed for individuals who have completed a bachelors degree in a field other than education, and who wish to become teachers',
+        time: ' Monday 5:30PM- 7:00PM',
+        link: 'https://meet.jit.si/ProffesionalInEducation',
+    },
+    {
+        id: 2,
+        title: 'Teaching of Jesus,English 101,CWTS',
+        instructor: 'Ping Cernal',
+        description: 'Teaching of Jesus ,English 101,CWTS',
+        time: 'Tuesday And Thursday 7:00 PM',
+        link: 'https://meet.jit.si/TeachingofJesusEnglish101CWTS',
+    },
+
+    {
+
+        id: 3,
+        title: 'Major Courses -Payao Mobile Class 1st Year',
         instructor: 'Jo Ann Ga-as',
         description: 'Introduction to basic coding concepts like variables, control structures, data types, and problem-solving using programming languages such as C, Python, or Java.',
         yearlevel: '1st year',
@@ -15,8 +32,8 @@ const classData = [
 
     },
     {
-        id: 2,
-        title:'Major Courses -Payao Mobile Class  2nd Year',
+        id: 4,
+        title: 'Major Courses -Payao Mobile Class  2nd Year',
         instructor: 'Jo Ann Ga-as',
         description: 'Introduction to basic coding concepts like variables, control structures, data types, and problem-solving using programming languages such as C, Python, or Java.',
         yearlevel: '1st year',
@@ -24,17 +41,17 @@ const classData = [
         link: 'https://meet.jit.si/MajorCourses-PayaoMobileClass2ndYear',
 
     },
-     {
-        id: 3,
-        title:'Major Courses -Siparoc Mobile Class  1st Year',
+    {
+        id: 5,
+        title: 'Major Courses -Siparoc Mobile Class  1st Year',
         instructor: 'Jo Ann Ga-as',
         description: 'Introduction to basic coding concepts like variables, control structures, data types, and problem-solving using programming languages such as C, Python, or Java.',
         yearlevel: '1st year',
         time: 'Mon 1PM - 2pm',
         link: 'https://meet.jit.si/MajorCourses-SiparocMobileClass1stYear',
     },
- 
- 
+
+
 
 ];
 
@@ -45,9 +62,7 @@ const ClassCard = ({ cls, joinClass }) => (
         <p className="class-instructor">Instructor: {cls.instructor}</p>
         <p className="class-description">{cls.description}</p>
         <div className="class-details">
-
-            <div className="detail-item">Yearlevel: {cls.yearlevel}</div>
-            <div className="detail-item">Time: {cls.time}</div>
+            <div className="detail-item fw-bold">Time: {cls.time}</div>
         </div>
         <button className="join-button" onClick={() => joinClass(cls.link, cls.title)}>Join Class</button>
     </div>
