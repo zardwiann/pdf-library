@@ -1,6 +1,6 @@
 const categoriesData = [
     { title: 'Science', count: '1,523 books', icon: 'fa-flask', tags: ['academic'] },
-    { title: 'Technology', count: '987 books', icon: 'fa-laptop-code', tags: ['popular', 'academic'],route:['library'] },
+    { title: 'Technology', count: '987 books', icon: 'fa-laptop-code', tags: ['popular', 'academic'],route:'/technology' },
     { title: 'History', count: '1,234 books', icon: 'fa-landmark', tags: ['academic'] },
     { title: 'Business', count: '834 books', icon: 'fa-briefcase', tags: ['academic', 'popular'] },
     { title: 'Health', count: '756 books', icon: 'fa-heartbeat', tags: ['new'] },

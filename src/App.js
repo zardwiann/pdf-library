@@ -13,6 +13,8 @@ import About from './Page1/aboutus';
 import LibraryCategory from './Page2/LibraryNavigationBar';
 import Technology from './Page2/Technology';
 import OnlineClass from './Page2/onlineclass';
+ 
+import LandingPageCategory from './Page2/Libraylanding';
 
 function App() {
 
@@ -30,10 +32,9 @@ function App() {
         </Route>
 
         <Route path="/library" element={<LibraryCategory />}>
-          <Route index element={<Technology />} />
-          <Route path="technology" element={<Technology />} />
-
+          <Route index element={<LandingPageCategory />} />
         </Route>
+          <Route path="technology" element={<Technology />} />
       </Routes>
     </BrowserRouter>
   );
