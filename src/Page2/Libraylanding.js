@@ -14,7 +14,6 @@ const LandingPageCategory = () => {
                 <h1 className="display-4 fw-bold text-success mt-5">
                     <i className="fas fa-book-open me-3 text-success"></i> JENTRA E-Library Categories
                 </h1>
-
             </div>
             <div className="hero-banner1">
                 <div className="floating-elements">
@@ -40,7 +39,7 @@ const LandingPageCategory = () => {
                                             </div>
                                             <div className="book-title">
                                                 <br />
-                                                <Link to={file.route}>Get Started</Link>
+                                                <Link to={file.route} className='btn btn-success'>Get Started</Link>
                                             </div>
                                         </div>
                                     </div>

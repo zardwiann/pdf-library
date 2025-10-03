@@ -57,7 +57,7 @@ const NavigationvBar = () => {
 
 
                             </li>
-                            <li className="nav-item">
+                            {/* <li className="nav-item">
                                 <Link
                                     className={`nav-link ${location.pathname === '/online' ? 'active' : ''}`}
                                     to="/online"
@@ -65,7 +65,7 @@ const NavigationvBar = () => {
                                     data-section="online"
                                 >    <i className="bi-collection me-1"></i>Online Class Schedule
                                 </Link>
-                            </li>
+                            </li> */}
                             <li className="nav-item">
                                 <Link
                                     className={`nav-link ${location.pathname === '/library' ? 'active' : ''}`}
